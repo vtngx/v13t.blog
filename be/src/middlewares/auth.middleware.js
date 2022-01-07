@@ -32,7 +32,6 @@ const requireAuth = async (req, res, next) => {
 
   const user = await User.findOne({ username: "vietnh" })
   req.user = user
-  console.log('use auth')
   next()
 }
 

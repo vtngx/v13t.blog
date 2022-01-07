@@ -22,7 +22,6 @@ const upload = async (req, res, next) => {
 const download = (req, res) => {
   const fileName = req.params.name
   const directoryPath = `${__dirname}/../public/uploads/`
-  console.log(directoryPath + fileName)
 
   res.download(directoryPath + fileName, fileName, e => {
     if (e)
