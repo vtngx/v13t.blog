@@ -68,7 +68,7 @@ PreviewModal.propTypes = {
     }),
     tags: PropTypes.array
   }).isRequired,
-  showPreview: PropTypes.func.isRequired,
+  showPreview: PropTypes.bool.isRequired,
   handleClosePreview: PropTypes.func.isRequired,
 };
 

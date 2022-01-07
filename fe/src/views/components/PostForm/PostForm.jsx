@@ -117,7 +117,7 @@ PostForm.propTypes = {
     tags: PropTypes.array
   }).isRequired,
   tags: PropTypes.array.isRequired,
-  bodyContent: PropTypes.func.isRequired,
+  bodyContent: PropTypes.string.isRequired,
   handleSubmit: PropTypes.func.isRequired,
   handleCancel: PropTypes.func.isRequired,
   handlePreview: PropTypes.func.isRequired,
