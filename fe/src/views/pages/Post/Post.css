@@ -1,0 +1,71 @@
+.postPage {
+    padding: 0 !important;
+    margin-top: 15vh;
+}
+
+.postPage_header {
+    margin-bottom: 6vh;
+}
+
+.postPage_headerTitle {
+    margin-top: 1vh;
+}
+
+.postPage_headerTitle h1 {
+    font-weight: 700;
+    font-size: 300%;
+    margin-bottom: 40px;
+}
+
+.postPage_headerActions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 30px !important;
+}
+
+.postPage_headerActions button {
+    background-color: white;
+    border: 2px solid rgb(12, 12, 12);
+    color: rgb(12, 12, 12);
+    margin-top: 10px;
+}
+
+.postPage_headerActions button:hover {
+    background-color: rgb(12, 12, 12);
+    border: 2px solid rgb(12, 12, 12);
+    color: white;
+    margin-top: 10px;
+}
+
+.postPage_headerActions button:focus {
+    background-color: rgb(12, 12, 12);
+    border: 2px solid rgb(12, 12, 12) !important;
+    color: white;
+    margin-top: 10px;
+}
+
+.postPage_content img {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.postPage_content p {
+    text-align: justify;
+}
+
+.postPage_headerTitle_info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.postPage_headerTitle_info a {
+    margin-right: 30px;
+    text-decoration: underline;
+    color: rgb(12, 12, 12);
+}
+
+.postPage_headerTitle_info svg {
+    margin-right: 6px !important;
+}

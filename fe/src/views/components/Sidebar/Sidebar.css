@@ -1,0 +1,38 @@
+.sidebar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  min-height: 100vh !important;
+  padding: 48px 0 0;
+  margin-left: 40px;
+  margin-top: 6vh;
+}
+
+.nav-item {
+  margin-bottom: 10px;
+}
+
+.nav-item svg {
+  margin-right: 10px;
+}
+
+.sidebar_navs {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.sidebar_navs a {
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+}
+
+.sidebar_navs a:hover {
+  text-decoration: underline;
+  color: black;
+}
+
+.sidebar_navs_new {
+  margin-top: 30px;
+}

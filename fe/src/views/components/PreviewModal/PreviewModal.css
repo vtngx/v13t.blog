@@ -1,0 +1,44 @@
+.modal-fullscreen {
+  height: auto !important;
+}
+
+.modal-body {
+  max-height: 500%;
+  overflow-y: scroll;
+}
+
+.preview_header {
+  margin-bottom: 6vh;
+  margin-top: 2vh;
+}
+
+.preview_header h1 {
+  font-weight: 700;
+  font-size: 300%;
+  margin-bottom: 40px;
+}
+
+.content img {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.content p {
+  text-align: justify;
+}
+
+.preview_headerTitle_info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.preview_headerTitle_info a {
+  margin-right: 30px;
+  text-decoration: underline;
+  color: rgb(12, 12, 12);
+}
+
+.preview_headerTitle_info svg {
+  margin-right: 6px !important;
+}

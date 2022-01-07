@@ -1,0 +1,28 @@
+.newTag {
+  margin-top: 15vh !important;
+}
+
+.newTagForm {
+  padding: 50px 50px 40px 50px !important;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgb(167, 164, 164);
+}
+
+.newTagForm_actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.newTagForm_actions button {
+  width: 40px !important;
+  margin-bottom: 10px;
+  margin-left: 20px;
+  background-color: white;
+  border: 2px solid rgb(12, 12, 12);
+  color: rgb(12, 12, 12);
+}
+
+.newTagForm_actions button:first-of-type {
+  padding-left: 10px !important;
+}
