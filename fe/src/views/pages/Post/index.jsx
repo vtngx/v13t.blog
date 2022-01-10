@@ -1,11 +1,11 @@
 import './index.css';
 import { useEffect, useState } from "react";
+import PostTitle from './components/PostTitle';
 import formatDate from "../../../utils/formatDate";
-import { Row, Col, Container, Button } from "react-bootstrap";
-import { Link, useNavigate, useParams } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import PostActions from './components/PostActions';
+import { Row, Col, Container } from "react-bootstrap";
+import { useNavigate, useParams } from "react-router-dom";
 import { getPost, deletePost } from "../../../services/posts.api";
-import { faPen, faTrash, faTag } from "@fortawesome/free-solid-svg-icons";
 
 const Post = (props) => {
   const navigate = useNavigate();
@@ -41,32 +41,21 @@ const Post = (props) => {
     <Container fluid className="postPage">
       <Row className="postPage_header">
         <Col md={8} className="postPage_headerTitle">
-          <h1>
-            {post.title}
-          </h1>
-          <div className='postPage_headerTitle_info'>
-            <p>
-              <b>{post.author.name}</b> | {post.createdAt}
-            </p>
-            <p>
-              <FontAwesomeIcon icon={faTag} />
-              <b><Link to='/'><i>{post.tags[0]?.name}</i></Link></b>
-            </p>
-          </div>
+          <PostTitle post={post} />
         </Col>
         <Col md={2} className="postPage_headerActions">
-          <Button variant='dark' onClick={handleEditPost}>
-            <FontAwesomeIcon icon={faPen} />
-          </Button>
-          <Button variant='dark' onClick={handleDeletePost}>
-            <FontAwesomeIcon icon={faTrash} />
-          </Button>
+          <PostActions
+            handleEditPost={handleEditPost}
+            handleDeletePost={handleDeletePost}
+          />
         </Col>
       </Row>
       <Row>
-        <Col md={8} className="postPage_content">
-          <div className="content" dangerouslySetInnerHTML={{__html: post.body}} />
-        </Col>
+        <Col
+          md={8}
+          className="postPage_content"
+          dangerouslySetInnerHTML={{__html: post.body}}
+        />
       </Row>
     </Container>
   );
