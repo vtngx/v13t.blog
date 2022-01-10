@@ -1,13 +1,13 @@
-import NavBar from '../Navbar/Navbar';
-import Home from '../../pages/Home/Home';
-import Post from '../../pages/Post/Post';
-import Sidebar from '../Sidebar/Sidebar';
-import NewTag from '../../pages/NewTag/NewTag';
+import NavBar from '../Navbar';
+import Home from '../../pages/Home';
+import Post from '../../pages/Post';
+import Sidebar from '../Sidebar';
+import NewTag from '../../pages/NewTag';
 import { Container, Col } from 'react-bootstrap';
 import { Routes, Route } from 'react-router-dom';
-import NewPost from '../../pages/NewPost/NewPost';
+import NewPost from '../../pages/NewPost';
 import React, { useEffect, useState } from 'react';
-import EditPost from '../../pages/EditPost/EditPost';
+import EditPost from '../../pages/EditPost';
 import { listTags } from '../../../services/tags.api';
 
 const PageWrapper = (props) => {

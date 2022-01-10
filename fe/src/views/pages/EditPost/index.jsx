@@ -1,12 +1,12 @@
-import './EditPost.css';
+import './index.css';
 import { Container } from 'react-bootstrap';
+import PostForm from '../../components/PostForm';
 import React, { useState, useEffect } from 'react';
 import { listTags } from '../../../services/tags.api';
 import { uploadFile } from '../../../services/files.api';
+import PreviewModal from '../../components/PreviewModal';
 import { useParams, useNavigate } from 'react-router-dom';
-import PostForm from '../../components/PostForm/PostForm';
 import { getPost, updatePost } from '../../../services/posts.api';
-import PreviewModal from '../../components/PreviewModal/PreviewModal';
 
 const EditPost = (props) => {
   const navigate = useNavigate();

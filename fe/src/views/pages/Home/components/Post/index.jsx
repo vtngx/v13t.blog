@@ -1,4 +1,4 @@
-import './Post.css';
+import './index.css';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { Col, Card } from 'react-bootstrap';

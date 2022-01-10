@@ -1,4 +1,4 @@
-import './Sidebar.css';
+import './index.css';
 import PropTypes from 'prop-types';
 import { Nav } from "react-bootstrap";
 import { Link } from 'react-router-dom';
@@ -34,13 +34,13 @@ const Sidebar = props => {
         <div className='sidebar_navs'>
           {/* home */}
           <Nav.Item>
-            <a href="/">home</a>
+            <Link to="/">home</Link>
           </Nav.Item>
 
           {/* tags */}
           {[...tags].map(tag => (
             <Nav.Item key={tag._id}>
-              <a href={`/?t=${tag?._id}`}>{tag?.name?.toLowerCase()}</a>
+              <Link to={`/?t=${tag?._id}`}>{tag?.name?.toLowerCase()}</Link>
             </Nav.Item>
           ))}
 

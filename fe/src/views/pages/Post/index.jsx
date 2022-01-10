@@ -1,4 +1,4 @@
-import './Post.css';
+import './index.css';
 import { useEffect, useState } from "react";
 import formatDate from "../../../utils/formatDate";
 import { Row, Col, Container, Button } from "react-bootstrap";

@@ -1,7 +1,7 @@
-import './PostForm.css';
+import './index.css';
 import React from 'react';
 import PropTypes from 'prop-types';
-import Editor from '../../components/Ckeditor/Ckeditor';
+import Editor from '../Ckeditor';
 import { Form, Col, Button, Row } from 'react-bootstrap';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes, faCheck, faEye } from "@fortawesome/free-solid-svg-icons";

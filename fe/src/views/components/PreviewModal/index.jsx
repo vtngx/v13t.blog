@@ -1,5 +1,5 @@
+import './index.css';
 import React from 'react';
-import './PreviewModal.css';
 import PropTypes from 'prop-types';
 import { Link } from "react-router-dom";
 import { faTag } from "@fortawesome/free-solid-svg-icons";

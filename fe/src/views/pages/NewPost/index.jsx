@@ -1,12 +1,12 @@
-import './NewPost.css';
+import './index.css';
 import { Container } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
+import PostForm from '../../components/PostForm';
 import React, { useState, useEffect } from 'react';
 import { listTags } from '../../../services/tags.api';
 import { uploadFile } from '../../../services/files.api';
 import { createPost } from '../../../services/posts.api';
-import PostForm from '../../components/PostForm/PostForm';
-import PreviewModal from '../../components/PreviewModal/PreviewModal';
+import PreviewModal from '../../components/PreviewModal';
 
 const NewPost = (props) => {
   const navigate = useNavigate();
