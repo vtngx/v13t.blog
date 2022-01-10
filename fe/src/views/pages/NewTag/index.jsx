@@ -1,14 +1,14 @@
 import './index.css';
-import PropTypes from 'prop-types';
-import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import React, { useContext, useState } from 'react';
 import { createTag } from '../../../services/tags.api';
+import { TagsContext } from '../../../providers/TagsProvider';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Form, Col, Button, Row, Container } from 'react-bootstrap';
 import { faTimes, faCheck } from "@fortawesome/free-solid-svg-icons";
 
 const NewTag = (props) => {
-  const { handleTagsChange } = props;
+  const { handleTagsChange } = useContext(TagsContext);
 
   const navigate = useNavigate();
 
@@ -27,7 +27,7 @@ const NewTag = (props) => {
     e.preventDefault();
     if(tag.name.trim())
       createTag(tag).then(res => {
-        handleTagsChange(res);
+        handleTagsChange();
         navigate(-1);
       });
   };
@@ -65,10 +65,6 @@ const NewTag = (props) => {
       </Form>
     </Container>
   );
-};
-
-NewTag.propTypes = {
-  handleTagsChange: PropTypes.func.isRequired,
 };
 
 export default NewTag;
