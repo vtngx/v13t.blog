@@ -1,7 +1,7 @@
 import './index.css';
-import React from 'react';
-import PropTypes from 'prop-types';
 import Editor from '../Ckeditor';
+import PropTypes from 'prop-types';
+import React, { memo } from 'react';
 import { Form, Col, Button, Row } from 'react-bootstrap';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes, faCheck, faEye } from "@fortawesome/free-solid-svg-icons";
@@ -127,4 +127,4 @@ PostForm.propTypes = {
   handleTagSelectChange: PropTypes.func.isRequired,
 };
 
-export default PostForm;
+export default memo(PostForm);

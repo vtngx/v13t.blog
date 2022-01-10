@@ -1,7 +1,7 @@
 import Post from '../Post';
 import PropTypes from 'prop-types';
 import { Row } from 'react-bootstrap';
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, memo } from 'react';
 import { listPosts } from '../../../../../services/posts.api';
 
 const PostList = (props) => {
@@ -37,7 +37,7 @@ const PostList = (props) => {
 };
 
 PostList.propTypes = {
-  tag: PropTypes.string.isRequired,
+  tag: PropTypes.string || null,
 }
 
-export default PostList;
+export default memo(PostList);

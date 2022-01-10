@@ -1,10 +1,10 @@
 import './index.css';
 import PostList from './components/PostList';
-import React, { useState, useEffect } from 'react';
+import React, { memo } from 'react';
 import { useSearchParams } from 'react-router-dom';
 
 const Home = (props) => {
-  const [params, _] = useSearchParams();
+  const params = useSearchParams()[0];
 
   const tag = params.get("t");
 
@@ -15,4 +15,4 @@ const Home = (props) => {
   );
 };
 
-export default Home;
+export default memo(Home);

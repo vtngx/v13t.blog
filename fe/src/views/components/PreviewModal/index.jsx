@@ -1,6 +1,6 @@
 import './index.css';
-import React from 'react';
 import PropTypes from 'prop-types';
+import React, { memo } from 'react';
 import { Link } from "react-router-dom";
 import { faTag } from "@fortawesome/free-solid-svg-icons";
 import { Container, Modal, Button, Col } from 'react-bootstrap';
@@ -72,4 +72,4 @@ PreviewModal.propTypes = {
   handleClosePreview: PropTypes.func.isRequired,
 };
 
-export default PreviewModal;
+export default memo(PreviewModal);

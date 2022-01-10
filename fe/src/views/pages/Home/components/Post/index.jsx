@@ -1,4 +1,5 @@
 import './index.css';
+import { memo } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { Col, Card } from 'react-bootstrap';
@@ -49,4 +50,4 @@ Post.propTypes = {
   index: PropTypes.number.isRequired
 };
 
-export default Post;
+export default memo(Post);

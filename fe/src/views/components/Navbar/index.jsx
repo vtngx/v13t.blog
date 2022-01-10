@@ -1,5 +1,5 @@
 import './index.css';
-import React from 'react';
+import React, { memo } from 'react';
 import { Navbar } from 'react-bootstrap';
 
 const NavBar = () => {
@@ -12,4 +12,4 @@ const NavBar = () => {
   );
 };
 
-export default NavBar;
+export default memo(NavBar);
