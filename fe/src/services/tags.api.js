@@ -28,3 +28,12 @@ export const createTag = async (body) => {
     return err;
   }
 }
+
+export const deleteTag = async (id) => {
+  try {
+    const res = await axios.delete(`${HOST}/tags/${id}`);
+    return res.data.data;
+  } catch (err) {
+    return err;
+  }
+}

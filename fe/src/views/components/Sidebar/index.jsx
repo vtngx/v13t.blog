@@ -1,30 +1,20 @@
 import './index.css';
-import PropTypes from 'prop-types';
+import React, { memo } from "react";
 import { Nav } from "react-bootstrap";
 import { Link } from 'react-router-dom';
-import React, { useState, useEffect } from "react";
+import SidebarTags from './SidebarTags';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faPlus } from "@fortawesome/free-solid-svg-icons";
 
 const Sidebar = props => {
-  const { tags } = props;
-  const [user, setUser] = useState({
-    name: '',
-    username: '',
-  });
-
-  useEffect(() => {
-    setUser({
-      name: 'Viet Nguyen',
-      username: 'vietnh'
-    });
-  }, []);
+  const user = {
+    name: 'Viet Nguyen',
+    username: 'vietnh',
+  };
 
   return (
     <>
-      <Nav className="d-none d-md-block sidebar"
-        activeKey="/home"
-      >
+      <Nav className="d-none d-md-block sidebar">
         {/* profile */}
         <Nav.Item>
           <FontAwesomeIcon icon={faUser} />
@@ -38,11 +28,9 @@ const Sidebar = props => {
           </Nav.Item>
 
           {/* tags */}
-          {[...tags].map(tag => (
-            <Nav.Item key={tag._id}>
-              <Link to={`/?t=${tag?._id}`}>{tag?.name?.toLowerCase()}</Link>
-            </Nav.Item>
-          ))}
+          <div className='sidebar_navs_tags'>
+            <SidebarTags />
+          </div>
 
           <div className='sidebar_navs_new'>
             {/* new tag */}
@@ -55,18 +43,10 @@ const Sidebar = props => {
               <Link to="/new"><FontAwesomeIcon icon={faPlus} />new post</Link>
             </Nav.Item>
           </div>
-
         </div>
-
-
-        {/* auth */}
       </Nav>
     </>
   );
 };
 
-Sidebar.propTypes = {
-  tags: PropTypes.array.isRequired,
-}
-
-export default Sidebar;
+export default memo(Sidebar);
