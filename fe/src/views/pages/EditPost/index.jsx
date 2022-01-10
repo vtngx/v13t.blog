@@ -38,7 +38,10 @@ const EditPost = (props) => {
 
   // handle changes
   const handleFileChange = e => setSelectedFile(e.target.files[0]);
-  const handleContentChange = data => setBodyContent(data);
+  const handleContentChange = data => {
+    setBodyContent(data)
+    setPost({ ...post, body: data })
+  };
   const handleInputChange = e => setPost({
     ...post,
     [e.target.name]: e.target.value
